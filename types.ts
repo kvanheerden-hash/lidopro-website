@@ -25,6 +25,7 @@ export interface Benefit {
 export interface SEOMetadata {
   title: string;
   description: string;
+  ogImage?: string;
 }
 
 export interface ProductFeature {

@@ -5,49 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LidoPro® | Effective Non-Addictive Pain Relief</title>
     <meta name="description" content="Physicians trust LidoPro® for safe and effective pain relief. Explore our Ointment and Patch solutions." />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                50: '#f0f9ff',
-                100: '#e0f2fe',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                800: '#075985',
-                900: '#0c4a6e',
-              },
-              accent: {
-                500: '#14b8a6',
-                600: '#0d9488',
-              }
-            },
-            keyframes: {
-              'blur-reveal': {
-                '0%': { filter: 'blur(12px)', opacity: '0', transform: 'translateY(2rem)' },
-                '100%': { filter: 'blur(0)', opacity: '1', transform: 'translateY(0)' },
-              }
-            },
-            animation: {
-              'blur-reveal': 'blur-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards',
-            }
-          },
-        },
-      }
+
+    <!-- Default canonical (updated dynamically per route by SEOUpdater) -->
+    <link rel="canonical" href="https://www.lidopro.com/" />
+
+    <!-- Indexing & mobile -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#006481" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922380/Lidopro_Logo_2_ce8lhq.png" />
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph / Social sharing (updated dynamically per route by SEOUpdater) -->
+    <meta property="og:type"        content="website" />
+    <meta property="og:url"         content="https://www.lidopro.com/" />
+    <meta property="og:title"       content="LidoPro® | Effective Non-Addictive Pain Relief" />
+    <meta property="og:description" content="Physicians trust LidoPro® for safe and effective pain relief. Explore our Ointment and Patch solutions." />
+    <meta property="og:image"       content="https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922380/Lidopro_Logo_2_ce8lhq.png" />
+    <meta property="og:image:alt"   content="LidoPro® — Effective Non-Addictive Pain Relief" />
+    <meta property="og:site_name"   content="LidoPro®" />
+
+    <!-- Twitter Card (updated dynamically per route by SEOUpdater) -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content="LidoPro® | Effective Non-Addictive Pain Relief" />
+    <meta name="twitter:description" content="Physicians trust LidoPro® for safe and effective pain relief. Explore our Ointment and Patch solutions." />
+    <meta name="twitter:image"       content="https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922380/Lidopro_Logo_2_ce8lhq.png" />
+
+    <!-- Organization JSON-LD structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clinic Pharma LLC",
+      "brand": {
+        "@type": "Brand",
+        "name": "LidoPro®"
+      },
+      "url": "https://www.lidopro.com",
+      "logo": "https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922380/Lidopro_Logo_2_ce8lhq.png",
+      "description": "Clinic Pharma LLC manufactures LidoPro®, a line of premium non-addictive topical pain relief products trusted by physicians and patients nationwide.",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "url": "https://www.lidopro.com/#/"
+      },
+      "sameAs": []
+    }
     </script>
-    <style>
-      html { scroll-behavior: smooth; }
-      .reveal-hidden { opacity: 0; }
-    </style>
+
+    <!-- Medical Product JSON-LD (Ointment) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "LidoPro® Ointment",
+      "description": "A unique combination of Capsaicin, Lidocaine, Menthol, and Methyl Salicylate for deep, localized pain relief. Non-addictive alternative to oral narcotics.",
+      "brand": {
+        "@type": "Brand",
+        "name": "LidoPro®"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Clinic Pharma LLC"
+      },
+      "url": "https://www.lidopro.com/#/lidopro-ointment",
+      "image": "https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922430/LidoPro_J_01_toevzq.jpg",
+      "category": "Topical Pain Relief",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "NDC", "value": "83881-001-35" },
+        { "@type": "PropertyValue", "name": "Active Ingredients", "value": "Lidocaine HCl 4%, Capsaicin 0.0325%, Menthol 10%, Methyl Salicylate 27.5%" }
+      ]
+    }
+    </script>
+
+    <!-- Medical Product JSON-LD (Patch) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "LidoPro® Patch",
+      "description": "Hydrogel transdermal patch with dual active ingredients providing up to 12 hours of targeted pain relief. Non-addictive alternative to oral narcotics.",
+      "brand": {
+        "@type": "Brand",
+        "name": "LidoPro®"
+      },
+      "manufacturer": {
+        "@type": "Organization",
+        "name": "Clinic Pharma LLC"
+      },
+      "url": "https://www.lidopro.com/#/lidopro-patch",
+      "image": "https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922473/LidoPro_Patch_L_01_h26q6f.png",
+      "category": "Topical Pain Relief",
+      "additionalProperty": [
+        { "@type": "PropertyValue", "name": "NDC", "value": "83881-402-15" },
+        { "@type": "PropertyValue", "name": "Active Ingredients", "value": "Lidocaine 4%, Menthol 1%" }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-200 selection:text-brand-900">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script> 
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

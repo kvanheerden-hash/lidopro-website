@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { X, Power, Pause, Play, RotateCcw } from "lucide-react";
@@ -33,8 +31,8 @@ const defaultServers: Server[] = [
     osType: "ubuntu",
     serviceLocation: "Clinical Strength",
     countryCode: "us",
-    ip: "NDC 70512-031-04",
-    dueDate: "Exp: Oct 2026",
+    ip: "NDC 83881-001-35",
+    dueDate: "Capsaicin 0.0325% / Lidocaine HCl 4% / Menthol 10% / Methyl Salicylate 27.5%",
     cpuPercentage: 98,
     status: "active"
   },
@@ -45,8 +43,8 @@ const defaultServers: Server[] = [
     osType: "windows",
     serviceLocation: "Transdermal Grade",
     countryCode: "us",
-    ip: "NDC 70512-030-05",
-    dueDate: "Exp: Dec 2026",
+    ip: "NDC 83881-402-15",
+    dueDate: "Lidocaine 4% / Menthol 1%",
     cpuPercentage: 95,
     status: "active"
   }
@@ -278,7 +276,7 @@ export function ServerManagementTable({
             <div className="col-span-2">Product Line</div>
             <div className="col-span-2">Grade</div>
             <div className="col-span-2">NDC Number</div>
-            <div className="col-span-2">Safety Expiry</div>
+            <div className="col-span-2">Key Ingredients</div>
             <div className="col-span-2">Potency</div>
             <div className="col-span-1">Status</div>
           </div>
@@ -447,7 +445,7 @@ export function ServerManagementTable({
 
                   <div className="bg-slate-50 rounded-lg p-3 border border-slate-200">
                     <label className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                      Clinical Expiry
+                      Active Ingredients
                     </label>
                     <div className="text-sm font-bold mt-1 text-slate-900">
                       {selectedServer.dueDate}

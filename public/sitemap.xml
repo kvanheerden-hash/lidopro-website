@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  NOTE: This site currently uses HashRouter (#/ routing). Search engines treat
+  hash fragments as non-crawlable, so all routes resolve to the same canonical
+  origin. The single entry below is the correct SEO-safe approach for this
+  deployment. Migrating to BrowserRouter with server-side URL rewriting would
+  enable individual page URLs to be indexed separately.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.lidopro.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

@@ -11,7 +11,7 @@ export const ROUTES = {
   SAFETY: '/safety-information',
   PRIVACY: '/privacy-policy',
   TERMS: '/terms-of-use',
-  RETURNS: '/refunds-returns',
+  DISTRIBUTION: '/how-to-access',
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -30,10 +30,12 @@ export const SEO_DATA: Record<string, SEOMetadata> = {
   [ROUTES.OINTMENT]: {
     title: 'LidoPro® Ointment | Deep Penetrating Relief',
     description: 'Our Ointment features anesthetic, analgesic, and anti-inflammatory agents with a hands-free applicator for deep, localized treatment.',
+    ogImage: 'https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922430/LidoPro_J_01_toevzq.jpg',
   },
   [ROUTES.PATCH]: {
     title: 'LidoPro® Patch | Long-Lasting Comfort',
     description: 'The dual active ingredients work together to relieve localized pain, helping support improved mobility and overall comfort.',
+    ogImage: 'https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922473/LidoPro_Patch_L_01_h26q6f.png',
   },
   [ROUTES.TREATS]: {
     title: 'What LidoPro® Treats | Targeted Pain Management',
@@ -51,11 +53,23 @@ export const SEO_DATA: Record<string, SEOMetadata> = {
     title: 'Safety Information | Using LidoPro® Responsibly',
     description: 'Important safety information, warnings, and directions for using LidoPro® products safely and effectively.',
   },
+  [ROUTES.PRIVACY]: {
+    title: 'Privacy Policy | LidoPro®',
+    description: 'Read the LidoPro® privacy policy to understand how we collect, use, and protect your personal information.',
+  },
+  [ROUTES.TERMS]: {
+    title: 'Terms of Use | LidoPro®',
+    description: 'Review the terms and conditions governing your use of the LidoPro® website and services.',
+  },
+  [ROUTES.DISTRIBUTION]: {
+    title: 'How to Access LidoPro® | Distribution & Availability',
+    description: 'Learn how to obtain LidoPro® products through licensed pharmacies and physician offices nationwide.',
+  },
 };
 
 export const HOME_CONTENT = {
   hero: {
-    headline: 'EFFECTIVE NON-ADDICTIVE PAIN RELIEF.',
+    headline: 'EFFECTIVE NON-ADDICTIVE PAIN RELIEF',
     subhead: 'Physicians trust LidoPro® for safe and effective pain relief. Advanced topical solutions designed for deep, localized comfort.',
     trustSignal: 'Trusted by Pain Management Specialists Nationwide',
   },
@@ -97,10 +111,10 @@ export const FAQ_CONTENT: FAQItem[] = [
   },
   {
     question: "Where can I get it?",
-    answer: "LidoPro® is often available through physician offices, independent pharmacies and mail-order pharmacies. Ask your provider for the best way to obtain it."
+    answer: "LidoPro® is dispensed through licensed pharmacies and physician offices. Ask your healthcare provider for a recommendation or prescription, and your local or mail-order pharmacy can obtain it through their authorized distributor. LidoPro® is not available for direct purchase from Clinic Pharma."
   },
   {
-    question: "Ointment vs Patch—how to choose?",
+    question: "Ointment vs. Patch: How to Choose?",
     answer: "The Ointment is ideal for irregular areas (knees, elbows, hands) and allows for massage. The Patch is excellent for large, flat areas (back, shoulders, thighs) where you want steady, mess-free application."
   },
   {
@@ -119,5 +133,7 @@ export const SAFETY_WARNINGS = [
   "Avoid contact with eyes.",
   "Do not bandage tightly or apply local heat (such as heating pads) to the area of use.",
   "Stop use and ask a doctor if condition worsens, or if symptoms persist for more than 7 days.",
+  "Do not use during pregnancy. If you are pregnant, do not use LidoPro® unless directed by your physician.",
+  "Do not use on children under 18 years of age.",
   "Keep out of reach of children. If swallowed, get medical help or contact a Poison Control Center right away."
 ];

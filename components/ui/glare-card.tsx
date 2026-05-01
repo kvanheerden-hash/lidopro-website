@@ -1,5 +1,5 @@
+import React, { useRef } from "react";
 import { cn } from "../../lib/utils";
-import { useRef } from "react";
 
 export const GlareCard = ({
   children,
@@ -37,7 +37,7 @@ export const GlareCard = ({
     "--radius": "48px",
     "--easing": "ease",
     "--transition": "var(--duration) var(--easing)",
-  } as any;
+  } as React.CSSProperties & Record<string, string>;
 
   const backgroundStyle = {
     "--step": "5%",

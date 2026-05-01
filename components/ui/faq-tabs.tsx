@@ -81,7 +81,7 @@ const FAQTabs = ({ categories, selected, setSelected }: { categories: Record<str
               animate={{ y: "0%" }}
               exit={{ y: "100%" }}
               transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-0 z-0 bg-gradient-to-r from-brand-600 to-brand-500"
+              className="absolute inset-0 z-0 bg-gradient-to-r from-[#006481] to-[#00151B]"
             />
           )}
         </AnimatePresence>

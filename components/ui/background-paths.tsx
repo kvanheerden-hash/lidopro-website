@@ -1,10 +1,9 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "../../lib/utils";
 
 function FloatingPaths({ position }: { position: number }) {
+    const prefersReducedMotion = useReducedMotion();
     const paths = Array.from({ length: 36 }, (_, i) => ({
         id: i,
         d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
@@ -34,7 +33,7 @@ function FloatingPaths({ position }: { position: number }) {
                         strokeWidth={path.width}
                         strokeOpacity={0.1 + path.id * 0.03}
                         initial={{ pathLength: 0.3, opacity: 0.6 }}
-                        animate={{
+                        animate={prefersReducedMotion ? {} : {
                             pathLength: 1,
                             opacity: [0.3, 0.6, 0.3],
                             pathOffset: [0, 1, 0],
@@ -66,7 +65,7 @@ export function BackgroundPaths({
 
     return (
         <div className={cn(
-            "relative min-h-[60vh] w-full flex items-center justify-center overflow-hidden bg-slate-50",
+            "relative min-h-[60vh] w-full flex items-center justify-center overflow-hidden [background:linear-gradient(to_right,#003F51,#006481,#003F51)]",
             className
         )}>
             <div className="absolute inset-0">
@@ -74,7 +73,7 @@ export function BackgroundPaths({
                 <FloatingPaths position={-1} />
             </div>
 
-            <div className="relative z-10 container mx-auto px-4 md:px-6 text-center py-20">
+            <div className="relative z-10 container mx-auto px-4 md:px-6 text-center pt-8 pb-6">
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -92,11 +91,12 @@ export function BackgroundPaths({
                         </motion.div>
                     )}
 
-                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter">
-                        {words.map((word, wordIndex) => (
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl mb-4 tracking-wide font-sans leading-tight">
+                        {/* First two words each on their own line */}
+                        {words.slice(0, 2).map((word, wordIndex) => (
                             <span
                                 key={wordIndex}
-                                className="inline-block mr-4 last:mr-0"
+                                className={`block${word === "NON-ADDICTIVE" ? " font-bold" : " font-light"}`}
                             >
                                 {word.split("").map((letter, letterIndex) => (
                                     <motion.span
@@ -104,21 +104,44 @@ export function BackgroundPaths({
                                         initial={{ y: 100, opacity: 0 }}
                                         animate={{ y: 0, opacity: 1 }}
                                         transition={{
-                                            delay:
-                                                wordIndex * 0.1 +
-                                                letterIndex * 0.03,
+                                            delay: wordIndex * 0.1 + letterIndex * 0.03,
                                             type: "spring",
                                             stiffness: 150,
                                             damping: 25,
                                         }}
-                                        className="inline-block text-transparent bg-clip-text 
-                                        bg-gradient-to-r from-slate-900 to-slate-700/80"
+                                        className="inline-block text-white"
                                     >
                                         {letter}
                                     </motion.span>
                                 ))}
                             </span>
                         ))}
+                        {/* Last two words share one line, light weight like EFFECTIVE */}
+                        <span className="block font-light">
+                            {words.slice(2).map((word, i) => {
+                                const wordIndex = i + 2;
+                                return (
+                                    <span key={wordIndex} className="inline-block mr-4 last:mr-0">
+                                        {word.split("").map((letter, letterIndex) => (
+                                            <motion.span
+                                                key={`${wordIndex}-${letterIndex}`}
+                                                initial={{ y: 100, opacity: 0 }}
+                                                animate={{ y: 0, opacity: 1 }}
+                                                transition={{
+                                                    delay: wordIndex * 0.1 + letterIndex * 0.03,
+                                                    type: "spring",
+                                                    stiffness: 150,
+                                                    damping: 25,
+                                                }}
+                                                className="inline-block text-white"
+                                            >
+                                                {letter}
+                                            </motion.span>
+                                        ))}
+                                    </span>
+                                );
+                            })}
+                        </span>
                     </h1>
 
                     {subtitle && (
@@ -126,7 +149,7 @@ export function BackgroundPaths({
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1, duration: 0.8 }}
-                            className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
+                            className="text-lg text-white max-w-4xl mx-auto leading-relaxed"
                         >
                             {subtitle}
                         </motion.p>

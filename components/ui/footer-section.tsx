@@ -1,8 +1,7 @@
-'use client';
 import React from 'react';
 import type { ComponentProps, ReactNode } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 import { ROUTES } from '../../constants';
 import { Link } from 'react-router-dom';
 
@@ -32,33 +31,16 @@ const footerLinks: FooterSection[] = [
 		links: [
 			{ title: 'FAQs', href: ROUTES.FAQ },
 			{ title: 'Ask Your Provider', href: ROUTES.PROVIDER },
+			{ title: 'How to Access', href: ROUTES.DISTRIBUTION },
 			{ title: 'Privacy Policy', href: ROUTES.PRIVACY },
 			{ title: 'Terms of Use', href: ROUTES.TERMS },
-		],
-	},
-	{
-		label: 'Resources',
-		links: [
-			{ title: 'Clinical Data', href: ROUTES.PROVIDER },
-			{ title: 'Patient Downloads', href: ROUTES.PROVIDER },
-			{ title: 'Provider Kit', href: ROUTES.PROVIDER },
-			{ title: 'Help Center', href: ROUTES.FAQ },
-		],
-	},
-	{
-		label: 'Social',
-		links: [
-			{ title: 'Facebook', href: '#', icon: FacebookIcon },
-			{ title: 'Instagram', href: '#', icon: InstagramIcon },
-			{ title: 'Youtube', href: '#', icon: YoutubeIcon },
-			{ title: 'LinkedIn', href: '#', icon: LinkedinIcon },
 		],
 	},
 ];
 
 export function Footer() {
 	return (
-		<footer className="w-full bg-slate-900 text-slate-300 py-12 lg:py-20 border-t border-slate-800 relative overflow-hidden">
+		<footer className="w-full text-slate-300 py-12 lg:py-20 border-t border-slate-800 relative overflow-hidden" style={{ backgroundColor: '#001920' }}>
 			{/* Brand Glow Effect */}
 			<div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent blur-sm" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 bg-[radial-gradient(35%_128px_at_50%_0%,theme(colors.brand.500/10%),transparent)] pointer-events-none" />
@@ -69,8 +51,9 @@ export function Footer() {
 						<div className="flex items-center gap-2">
                             <img 
                                 src="https://res.cloudinary.com/dwt8avwjv/image/upload/v1765922380/Lidopro_Logo_2_ce8lhq.png" 
-                                alt="LidoPro® Logo" 
-                                className="h-10 w-auto brightness-0 invert" 
+                                alt="LidoPro® Logo"
+                                loading="lazy"
+                                className="h-10 w-auto brightness-0 invert"
                             />
                         </div>
 						<p className="text-slate-400 text-sm leading-relaxed max-w-sm">

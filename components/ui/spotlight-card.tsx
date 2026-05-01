@@ -58,8 +58,8 @@ const GlowCard: React.FC<GlowCardProps> = ({
 
   const { base, spread } = glowColorMap[glowColor];
 
-  const getInlineStyles = () => {
-    const baseStyles: any = {
+  const getInlineStyles = (): React.CSSProperties & Record<string, string | number> => {
+    const baseStyles: React.CSSProperties & Record<string, string | number> = {
       '--base': base,
       '--spread': spread,
       '--radius': '24', // Match rounded-3xl/2xl
