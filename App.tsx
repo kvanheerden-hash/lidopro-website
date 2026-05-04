@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { ProductPage } from './pages/ProductPages';
@@ -25,8 +25,7 @@ const SEOUpdater = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // HashRouter: location.pathname is always "/"; real route is in location.hash
-    const route = location.hash.replace(/^#/, '') || '/';
+    const route = location.pathname;
     const seo = SEO_DATA[route] || SEO_DATA[ROUTES.HOME];
     const canonicalUrl = `${BASE_URL}${route}`;
 
@@ -72,7 +71,7 @@ const NotFoundPage: React.FC = () => (
       The page you're looking for doesn't exist or may have moved.
     </p>
     <a
-      href="#/"
+      href="/"
       className="inline-flex items-center justify-center px-8 py-3 rounded-lg font-medium text-white transition-all"
       style={{ backgroundColor: '#006481' }}
     >
