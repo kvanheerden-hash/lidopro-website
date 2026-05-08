@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Section, Button } from '../components/UI';
 import { CTABand, ContactForm } from '../components/Layout';
 import { ROUTES, SAFETY_WARNINGS } from '../constants';
-import { AlertTriangle, CheckCircle2, MessageCircle, ClipboardList, Stethoscope, Activity, Zap, ShieldAlert, Droplets, Bone, ActivitySquare, Lock, ScrollText, PhoneCall, ExternalLink, MapPin } from 'lucide-react';
+import { AlertTriangle, CheckCircle2, MessageCircle, ClipboardList, Stethoscope, Activity, Zap, ShieldAlert, Droplets, Bone, ActivitySquare, Lock, ScrollText, PhoneCall, ExternalLink, MapPin, FileDown } from 'lucide-react';
 import musclePainImg from '../assets/musclepain.webp';
 import nervePainImg from '../assets/nervepain.webp';
 import jointPainImg from '../assets/jointpain.webp';
@@ -307,6 +307,33 @@ export const ProviderPage = () => {
           </div>
 
           <div className="space-y-8">
+            {/* Prepare for Your Visit — Patient Discussion Guide download */}
+            <div className="bg-gradient-to-br from-brand-600 to-[#003F51] p-10 rounded-3xl shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 opacity-[0.07] pointer-events-none -mr-10 -mt-10">
+                <MoleculePattern color="#ffffff" />
+              </div>
+              <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
+                <div className="w-16 h-16 bg-white/15 rounded-3xl flex items-center justify-center flex-shrink-0">
+                  <FileDown size={32} className="text-white" />
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">Prepare for Your Visit</h2>
+                  <p className="text-brand-100 leading-relaxed max-w-2xl">
+                    Make your next appointment easier with our Patient Discussion Guide. This downloadable conversation starter helps you talk to your provider about your specific pain, safety considerations like your medical history, and which LidoPro® product best supports your personal treatment goals.
+                  </p>
+                </div>
+                <a
+                  href="https://terrain-pharma-marketing-department.s3.us-east-1.amazonaws.com/Assets/Discussion+Points.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white text-brand-700 font-bold rounded-2xl shadow-lg hover:bg-brand-50 transition-colors flex-shrink-0 whitespace-nowrap"
+                >
+                  <FileDown size={18} />
+                  Download Your Guide
+                </a>
+              </div>
+            </div>
+
             {/* Is LidoPro Right for You */}
             <div className="bg-white p-10 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-48 h-48 bg-brand-50 rounded-full transform translate-x-24 -translate-y-24 pointer-events-none" />
