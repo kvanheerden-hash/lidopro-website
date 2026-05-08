@@ -481,7 +481,7 @@ export const ProviderPage = () => {
                 </div>
                 <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">Clinical Integration &amp; Multimodal Guide</h2>
                 <p className="text-slate-300 leading-relaxed max-w-2xl text-sm">
-                  Designed exclusively for licensed healthcare providers, this comprehensive guide offers practical protocols for incorporating LidoPro® Ointment and Patch into complex, patient-centered pain management plans. Explore evidence-based strategies for integrating topicals with physical and occupational therapy, managing specialized populations — such as the elderly or safety-sensitive workers — and utilizing LidoPro® as an adjunctive option when oral NSAIDs are contraindicated. The guide also includes detailed pharmacological profiles and essential safety references regarding absolute contraindications like Warfarin use.
+                  Designed exclusively for licensed healthcare providers, this comprehensive guide offers practical protocols for incorporating LidoPro® Ointment and Patch into complex, patient-centered pain management plans. Explore evidence-based strategies for integrating topicals with physical and occupational therapy, managing specialized populations and utilizing LidoPro® as an adjunctive option when oral NSAIDs are contraindicated. The guide also includes detailed pharmacological profiles and essential safety references regarding absolute contraindications like Warfarin use.
                 </p>
               </div>
               <a
