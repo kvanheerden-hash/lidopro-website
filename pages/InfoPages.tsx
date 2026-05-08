@@ -465,6 +465,37 @@ export const ProviderPage = () => {
             </div>
           </div>
 
+          {/* Clinical Integration & Multimodal Guide — HCP download */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-10 rounded-3xl shadow-xl relative overflow-hidden mt-8">
+            <div className="absolute bottom-0 left-0 w-64 h-64 opacity-[0.07] pointer-events-none -ml-10 -mb-10">
+              <MoleculePattern color="#ffffff" />
+            </div>
+            <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8">
+              <div className="w-16 h-16 bg-white/10 rounded-3xl flex items-center justify-center flex-shrink-0">
+                <FileDown size={32} className="text-accent-500" />
+              </div>
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-500/15 text-accent-500 text-xs font-bold uppercase tracking-widest mb-3">
+                  <Stethoscope size={12} />
+                  <span>For Licensed Healthcare Providers</span>
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-3 tracking-tight">Clinical Integration &amp; Multimodal Guide</h2>
+                <p className="text-slate-300 leading-relaxed max-w-2xl text-sm">
+                  Designed exclusively for licensed healthcare providers, this comprehensive guide offers practical protocols for incorporating LidoPro® Ointment and Patch into complex, patient-centered pain management plans. Explore evidence-based strategies for integrating topicals with physical and occupational therapy, managing specialized populations — such as the elderly or safety-sensitive workers — and utilizing LidoPro® as an adjunctive option when oral NSAIDs are contraindicated. The guide also includes detailed pharmacological profiles and essential safety references regarding absolute contraindications like Warfarin use.
+                </p>
+              </div>
+              <a
+                href="https://terrain-pharma-marketing-department.s3.us-east-1.amazonaws.com/Assets/Multimodal+Overview.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-accent-500 text-white font-bold rounded-2xl shadow-lg hover:bg-accent-600 transition-colors flex-shrink-0 whitespace-nowrap"
+              >
+                <FileDown size={18} />
+                Download Clinical Guide
+              </a>
+            </div>
+          </div>
+
           <div className="mt-24" id="contact-form">
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 text-center tracking-tight">Connect with the LidoPro Team</h2>
             <p className="text-slate-500 text-center mb-16 text-lg">Clinical support and general inquiries.</p>
