@@ -32,7 +32,7 @@ const defaultServers: Server[] = [
     serviceLocation: "Clinical Strength",
     countryCode: "us",
     ip: "NDC 83881-001-35",
-    dueDate: "Capsaicin 0.0325% / Lidocaine HCl 4% / Menthol 10% / Methyl Salicylate 27.5%",
+    dueDate: "Capsaicin / Lidocaine HCl / Menthol / Methyl Salicylate",
     cpuPercentage: 98,
     status: "active"
   },
@@ -44,7 +44,7 @@ const defaultServers: Server[] = [
     serviceLocation: "Transdermal Grade",
     countryCode: "us",
     ip: "NDC 83881-402-15",
-    dueDate: "Lidocaine 4% / Menthol 1%",
+    dueDate: "Lidocaine / Menthol",
     cpuPercentage: 95,
     status: "active"
   }

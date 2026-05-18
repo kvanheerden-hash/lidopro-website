@@ -46,17 +46,17 @@ export const ProductPage: React.FC<ProductPageProps> = ({ type }) => {
         { title: "Clinical Integrity", desc: "Manufactured in FDA-compliant cGMP facilities and stored in temperature-controlled warehouses.", icon: ThermometerSnowflake },
       ],
       ingredients: [
-        { name: "Lidocaine 4%", type: "External Anesthetic", desc: "Blocks pain signals at the nerve level for immediate numbing.", color: "bg-brand-600" },
-        { name: "Capsaicin 0.0325%", type: "External Analgesic", desc: "Desensitizes sensory neurons to manage chronic and neuropathic pain.", color: "bg-red-500" },
-        { name: "Menthol 10%", type: "External Analgesic", desc: "Provides cooling relief and activates TRPM8 receptors for fast comfort.", color: "bg-accent-500" },
-        { name: "Methyl Salicylate 27.5%", type: "External Analgesic", desc: "Topical anti-inflammatory that targets tissue swelling and pain.", color: "bg-brand-900" }
+        { name: "Lidocaine", type: "External Anesthetic", desc: "Blocks pain signals at the nerve level for immediate numbing.", color: "bg-brand-600" },
+        { name: "Capsaicin", type: "External Analgesic", desc: "Desensitizes sensory neurons to manage chronic and neuropathic pain.", color: "bg-red-500" },
+        { name: "Menthol", type: "External Analgesic", desc: "Provides cooling relief and activates TRPM8 receptors for fast comfort.", color: "bg-accent-500" },
+        { name: "Methyl Salicylate", type: "External Analgesic", desc: "Topical anti-inflammatory that targets tissue swelling and pain.", color: "bg-brand-900" }
       ],
       drugFacts: {
         activeIngredients: [
-          { name: "Lidocaine 4%", purpose: "External Anesthetic" },
-          { name: "Menthol 10%", purpose: "External Analgesic" },
-          { name: "Methyl Salicylate 27.5%", purpose: "External Analgesic" },
-          { name: "Capsaicin 0.0325%", purpose: "External Analgesic" },
+          { name: "Lidocaine", purpose: "External Anesthetic" },
+          { name: "Menthol", purpose: "External Analgesic" },
+          { name: "Methyl Salicylate", purpose: "External Analgesic" },
+          { name: "Capsaicin", purpose: "External Analgesic" },
         ],
         uses: "For temporary relief of minor aches and pains of muscles and joints associated with simple backache, arthritis, strains, bruises, and sprains.",
         directions: [
@@ -84,13 +84,13 @@ export const ProductPage: React.FC<ProductPageProps> = ({ type }) => {
         { title: "Secure Movement", desc: "Engineered for superior adhesion to move with you.", icon: Shield },
       ],
       ingredients: [
-        { name: "Lidocaine 4%", type: "External Anesthetic", desc: "Numbs acute pain signals locally to provide comfort.", color: "bg-brand-600" },
-        { name: "Menthol 1%", type: "External Analgesic", desc: "Immediate cooling sensation to help calm the irritated area.", color: "bg-accent-500" },
+        { name: "Lidocaine", type: "External Anesthetic", desc: "Numbs acute pain signals locally to provide comfort.", color: "bg-brand-600" },
+        { name: "Menthol", type: "External Analgesic", desc: "Immediate cooling sensation to help calm the irritated area.", color: "bg-accent-500" },
       ],
       drugFacts: {
         activeIngredients: [
-          { name: "Lidocaine 4%", purpose: "External Anesthetic" },
-          { name: "Menthol 1%", purpose: "External Analgesic" },
+          { name: "Lidocaine", purpose: "External Anesthetic" },
+          { name: "Menthol", purpose: "External Analgesic" },
         ],
         uses: "For temporary relief of minor aches and pains of muscles and joints associated with simple backache, arthritis, strains, bruises, and sprains.",
         directions: [
