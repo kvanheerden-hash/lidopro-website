@@ -485,7 +485,7 @@ export const ProviderPage = () => {
                 </p>
               </div>
               <a
-                href="https://terrain-pharma-marketing-department.s3.us-east-1.amazonaws.com/Assets/Multimodal+Overview.pdf"
+                href="https://terrain-pharma-marketing-department.s3.us-east-1.amazonaws.com/Assets/multimodaloverview2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-accent-500 text-white font-bold rounded-2xl shadow-lg hover:bg-accent-600 transition-colors flex-shrink-0 whitespace-nowrap"
