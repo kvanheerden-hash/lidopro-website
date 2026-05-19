@@ -104,7 +104,7 @@ const Navbar = () => {
   );
 };
 
-export const ContactForm = () => {
+export const ContactForm = ({ showHeader = true }: { showHeader?: boolean }) => {
   React.useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://link.msgsndr.com/js/form_embed.js';
@@ -117,10 +117,12 @@ export const ContactForm = () => {
 
   return (
     <div id="contact-form" className="w-full">
-      <div className="mb-6">
-        <h3 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">Connect with the LidoPro Team</h3>
-        <p className="text-slate-500">Clinical support and general inquiries</p>
-      </div>
+      {showHeader && (
+        <div className="mb-6">
+          <h3 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">Connect with the LidoPro Team</h3>
+          <p className="text-slate-500">Clinical support and general inquiries</p>
+        </div>
+      )}
       <div style={{ minHeight: '637px' }}>
       <iframe
         src="https://api.leadconnectorhq.com/widget/form/EmrMl93rniKSMK7dz5UH"

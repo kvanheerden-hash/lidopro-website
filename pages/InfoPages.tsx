@@ -500,7 +500,7 @@ export const ProviderPage = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-4 text-center tracking-tight">Connect with the LidoPro Team</h2>
             <p className="text-slate-500 text-center mb-16 text-lg">Clinical support and general inquiries.</p>
             <GlowCard customSize className="max-w-3xl mx-auto p-0 rounded-[2.5rem]" glowColor="blue">
-               <ContactForm />
+               <ContactForm showHeader={false} />
             </GlowCard>
           </div>
         </div>
